@@ -1,0 +1,45 @@
+{
+  "vector": {
+    "recall@1": 0.9,
+    "recall@3": 1.0,
+    "recall@5": 1.0,
+    "mrr": 0.942,
+    "latency_p50_ms": 64.1,
+    "latency_p95_ms": 125.8,
+    "misses": []
+  },
+  "keyword": {
+    "recall@1": 0.6,
+    "recall@3": 0.85,
+    "recall@5": 0.9,
+    "mrr": 0.723,
+    "latency_p50_ms": 19.6,
+    "latency_p95_ms": 28.5,
+    "misses": [
+      "How do I enable CORS in FastAPI?",
+      "How do I serve static files?",
+      "How do I deploy FastAPI with Docker?",
+      "How do I stream data in a response?"
+    ]
+  },
+  "hybrid": {
+    "recall@1": 0.75,
+    "recall@3": 0.925,
+    "recall@5": 1.0,
+    "mrr": 0.845,
+    "latency_p50_ms": 93.6,
+    "latency_p95_ms": 147.0,
+    "misses": []
+  },
+  "hybrid+rerank": {
+    "recall@1": 0.925,
+    "recall@3": 0.975,
+    "recall@5": 0.975,
+    "mrr": 0.949,
+    "latency_p50_ms": 2208.5,
+    "latency_p95_ms": 2455.0,
+    "misses": [
+      "Which Python versions and installation steps does the fastapi command line tool support?"
+    ]
+  }
+}

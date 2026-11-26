@@ -1,0 +1,31 @@
+{
+  "How do I run a background task after returning a response?": {
+    "question": "How do I run a background task after returning a response?",
+    "error": "Gemini request failed: 429 RESOURCE_EXHAUSTED",
+    "expected": [
+      "tutorial/background-tasks.md"
+    ]
+  },
+  "How can I add validation constraints like max length to query parameters?": {
+    "question": "How can I add validation constraints like max length to query parameters?",
+    "answer": "To add validation constraints like `max_length` to query parameters, you can use `Query()` inside `Annotated` for the parameter definition and pass the desired validation arguments to `Query()` [1][2]. \n\nFor example, to set validation constraints on a string query parameter:\n* **Max length:** `q: Annotated[str | None, Query(max_length=50)] = None` [1]\n* **Min and max length:** `q: Annotated[str | None, Query(min_length=3, max_length=50)] = None` [2]\n\nValidations specific to string parameters include:\n* `min_length` [2][4]\n* `max_length` [1][2][4]\n* `pattern` [4][5]\n\nAlternatively, as an older syntax, you can set `Query` as the default value instead of using `Annotated`: \n`q: str | None = Query(default=None, max_length=50)` [3].",
+    "sources": [
+      "tutorial/query-params-str-validations.md",
+      "tutorial/query-params-str-validations.md",
+      "tutorial/query-params-str-validations.md",
+      "tutorial/query-params-str-validations.md",
+      "tutorial/query-params-str-validations.md"
+    ],
+    "cited": [
+      1,
+      2,
+      4,
+      5,
+      3
+    ],
+    "latency_ms": 72260.7,
+    "expected": [
+      "tutorial/query-params-str-validations.md"
+    ]
+  }
+}
